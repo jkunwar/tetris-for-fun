@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <body>
+    <div class="game-container">
+      <canvas id="canvas" width="240" height="400"></canvas>
+
+      <div class="info-panel">
+        <div id="scoreContainer">Score: <span id="score">0</span></div>
+
+        <div class="level-select">
+          <label for="speed">Level:</label>
+          <select name="speed" id="speed">
+            <option value="EASY">Easy</option>
+            <option value="MEDIUM">Medium</option>
+            <option value="HARD">Hard</option>
+          </select>
+        </div>
+
+        <div class="game-buttons">
+          <button onclick="startGame()">Start</button>
+          <button onclick="stopGame()">Stop</button>
+          <button onclick="pauseGame()">Pause</button>
+          <button onclick="resumeGame()">Resume</button>
+        </div>
+      </div>
+
+      <div class="control-buttons">
+        <button onclick="game?.playerMove(-1)">←</button>
+        <button onclick="game?.playerDrop()">↓</button>
+        <button onclick="game?.playerMove(1)">→</button>
+        <button onclick="game?.playerRotate(-1)">⟲</button>
+        <button onclick="game?.playerRotate(1)">⟳</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+
+  </body>
+
+</html>

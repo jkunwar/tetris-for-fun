@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+canvas {
+  background: #000;
+  border: 2px solid #fff;
+}
+
+.info-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#scoreContainer {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.level-select {
+  margin-bottom: 1rem;
+}
+
+.game-buttons button {
+  margin: 0.2rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background: #222;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 5px;
+}
+
+.game-buttons button:hover {
+  background: #333;
+}
+
+.control-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  grid-template-rows: repeat(2, 60px);
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.control-buttons button {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  background: #444;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  touch-action: manipulation;
+}
+
+.control-buttons button:hover {
+  background: #666;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .game-container {
+    gap: 0.5rem;
+  }
+
+  .level-select {
+    margin-bottom: 0.5rem;
+  }
+
+  .control-buttons {
+    margin-top: 0.5rem;
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(2, 50px);
+  }
+
+  .control-buttons button {
+    font-size: 1.2rem;
+    padding: 0.4rem;
+  }
+
+  .game-buttons button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  #scoreContainer {
+    font-size: 1.2rem;
+  }
+}
